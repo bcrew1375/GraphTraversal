@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+
+<Stage resizable="false" title="Graph Traversal Demo" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GraphTraversal.GraphTraversalController">
+   <scene>
+      <Scene>
+          <AnchorPane>
+            <children>
+               <VBox>
+                  <children>
+                     <MenuBar>
+                       <menus>
+                         <Menu mnemonicParsing="false" text="File">
+                           <items>
+                                 <MenuItem mnemonicParsing="false" onAction="#menuParseRouteFileButtonClicked" text="Parse Route File" />
+                                 <SeparatorMenuItem mnemonicParsing="false" />
+                             <MenuItem mnemonicParsing="false" onAction="#menuExitButtonClicked" text="Exit" />
+                           </items>
+                         </Menu>
+                       </menus>
+                     </MenuBar>
+                     <GridPane>
+                       <columnConstraints>
+                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                       </columnConstraints>
+                       <rowConstraints>
+                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                       </rowConstraints>
+                        <children>
+                           <Label text="Input">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <padding>
+                                 <Insets left="10.0" />
+                              </padding>
+                           </Label>
+                           <Label text="Output" GridPane.columnIndex="1">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                              <padding>
+                                 <Insets left="10.0" />
+                              </padding>
+                           </Label>
+                        </children>
+                        <opaqueInsets>
+                           <Insets />
+                        </opaqueInsets>
+                     </GridPane>
+                     <HBox prefHeight="102.0" prefWidth="600.0">
+                        <children>
+                           <TextArea fx:id="inputTextArea" editable="false" />
+                           <Separator orientation="VERTICAL" prefHeight="200.0" />
+                           <TextArea fx:id="outputTextArea" editable="false" />
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+            </children>
+         </AnchorPane>
+      </Scene>
+   </scene>
+</Stage>
